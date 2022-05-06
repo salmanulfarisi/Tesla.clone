@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #171a20;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.desktop {
+    display: none;
+}
+
+@media(min-width:1200px) {
+    .desktop {
+        display: initial;
+    }
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+a.logo {
+    width: 150px;
+    height: 25px;
+    color: inherit;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: inherit;
+}
+
+section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+section .content {
+    width: 100%;
+    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
+
+section a {
+    color: inherit;
+}
+
+section h1 {
+    font-size: 50px;
+}
+
+section .buttons a {
+    display: block;
+    background-color: #eaeae8;
+    color: inherit;
+    text-decoration: none;
+    padding: 12px 50px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+section .buttons {
+    display: grid;
+    row-gap: 15px;
+    margin: 0 40px;
+}
+
+@media(min-width:600px) {
+    section .buttons {
+
+        margin: 0 auto;
+        max-width: 640px;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 300px;
+    background-color: white;
+    padding: 70px 30px;
+    z-index: 4;
+    height: 100vh;
+    overflow: scroll;
+}
+
+aside a {
+    display: block;
+    padding: 12px 0px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+button.closebtn {
+    font-size: 24px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.backblur {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 30%);
+    backdrop-filter: blur(5px);
+}
+
+footer a {
+    color: grey;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: grey;
+}
+#footer{
+    display: block;
+}
+@media(max-width:600px){
+    footer a{
+        display: grid;
+        margin-bottom: 10px;
+
+    }
+    #footer{
+        display: none;
+        
+    }
+}
